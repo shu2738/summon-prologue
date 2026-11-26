@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>소환 프롤로그</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE tender · IDEA vertical webtoon with editable narration · PICTURE the panels · COLOUR light-to-black by act · LAYOUT single column */
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;background:#0c0c0e}
+main{max-width:720px;margin:0 auto}
+img{display:block;width:100%;height:auto}
+.n{padding:72px 24px 56px;text-align:center;white-space:pre-wrap;font:17px/1.9 "Noto Serif KR",serif;outline:none}
+.a1{background:#fdfbf6;color:#3c3732}.a2{background:#f4f2ee;color:#373741}.a3{background:#26262c;color:#e1e1e6}.a4{background:#0c0c0e;color:#ebebee}
+body.edit .n{box-shadow:inset 0 0 0 2px #4a7dff;cursor:text}
+body.edit .n:focus{box-shadow:inset 0 0 0 3px #ff4a7d}
+.tag{display:none;font:12px/1 sans-serif;opacity:.6;margin-bottom:10px}
+body.edit .tag{display:block}
+.bar{position:fixed;right:12px;bottom:12px;display:flex;gap:8px;z-index:9;flex-wrap:wrap;justify-content:flex-end}
+.bar button{min-height:44px;padding:0 16px;border:0;border-radius:22px;font:600 15px sans-serif;background:#fff;color:#111;box-shadow:0 2px 10px #0006;cursor:pointer}
+.bar button.on{background:#4a7dff;color:#fff}
+.bar button[hidden]{display:none}
+.msg{position:fixed;left:50%;bottom:72px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:8px;font:14px sans-serif;opacity:0;transition:opacity .2s;pointer-events:none}
+.msg.show{opacity:1}
+.tail{height:240px}
+</style></head><body>
+<main id="m"></main>
+<script>
+{
+const T=["우리 마을은 진짜 작았어.\n지도에도 잘 안 나올 만큼.", "우리 집은 저기 언덕 위.\n아빠가 촌장이었거든.", "맨날 공부, 공부, 또 공부.\n솔직히… 지겨워 죽는 줄 알았어.", "밖에서 애들 웃는 소리가 들리면\n괜히 더 쓸쓸했어.", "근데 그날,\n창문 밑에서 웬 애가 나한테 손을 흔드는 거야.", "\"야, 나와!\"\n\n…진짜 바보 같지?\n근데 나, 그 말에 그냥 뛰어내렸어.", "시장 처음 가 봤을 때 진짜 신기했어.\n다 반짝반짝해 보였거든.", "네가 사 준 꼬치,\n아직도 그 맛이 기억나.\n진짜 맛있었는데.", "그날부터 나 맨날 창문 넘었잖아.\n너 보고 싶어서.", "화관 만들어 준다고 끙끙대던 거 기억나?\n완전 삐뚤빼뚤했는데,", "…그래도 나, 그거 엄청 좋았어.", "\"내일도 놀자. 그다음 날도!\"\n\n새끼손가락까지 걸었으면서.", "여름엔 냇가에서 물 튀기면서 놀았지.\n너 그때 홀딱 젖었었잖아. 히히.", "내가 넘어져서 울었을 때,\n네가 붕대 감아 줬던 거.\n나 그거 아직도 못 잊어.", "겨울이 와도, 또 와도\n넌 계속 내 옆에 있었어.\n그게 당연한 줄 알았어.", "아빠 엄청 졸라서 아카데미도 들어갔어!\n엘프에 수인에 용족까지…\n처음엔 진짜 눈이 휘둥그레졌다니까.", "근데 나는 인간이라 그런지…\n마나가 쥐꼬리만 했어.\n불꽃 하나 제대로 못 피웠어.", "그래도 괜찮았어.\n비 오는 날엔 네가 우산 씌워 줬으니까.\n…어깨 다 젖으면서.", "수확제 날 밤에,\n등불 날리면서 같이 춤췄던 거.\n그냥… 시간이 멈췄으면 좋겠다고 생각했어.", "그때 그 화관,\n다 말라 버렸는데도 못 버리겠더라.", "별똥별 떨어지던 날,\n나 소원 하나만 빌었어.\n\n너랑 계속 같이 있게 해 달라고.", "열아홉 살 봄에,\n밤새 팔찌 만들어서 네 손목에 묶어 줬잖아.\n부적이라고 했는데… 사실 좀 부끄러웠어.", "이 세상 마나는 전부 세계수에서 나온대.\n아카데미에서 배운 거야.\n다들 그게 당연한 줄 알았지.", "근데 그 세계수가 말라 가기 시작했어.\n남은 마나 차지하겠다고\n다섯 종족이 서로 싸우기 시작했고.", "마을 꽃들이 하나둘 시들더니,\n광장에 전쟁 났다는 소식이 붙었어.\n…나 진짜 무서웠어.", "전쟁은 그냥,\n우리 마을이 길목에 있다는 이유만으로\n전부 다 태워 버렸어.", "그리고 너는…\n나 감싸 주다가 쓰러졌어.", "손이 아직 따뜻했어.\n내가 묶어 준 팔찌도 그대로였고.\n\n부적이라며… 아무것도 못 지켜 줬잖아.", "나 싸울 줄도 모르고, 마나도 없어.\n가진 거라곤 이 피밖에 없어.\n\n다 줄게요. 진짜 다 줄게요.\n그러니까 제발…\n제발, 걔 좀 돌려주세요."];
+const act=i=>i<15?'a1':i<22?'a2':i<25?'a3':'a4';
+const m=document.getElementById('m');
+m.innerHTML=T.map((_,i)=>`<div class="n ${act(i)}"><div class="t"></div></div><img src="c${String(i+1).padStart(2,'0')}.jpg" alt="${i+1}" loading="lazy">`).join('')+'<div class="tail"></div>';
+m.querySelectorAll('.t').forEach((t,i)=>t.textContent=T[i]);
+}
+</script></body></html>
